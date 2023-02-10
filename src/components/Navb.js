@@ -2,22 +2,28 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
-import Logo from "../logo.svg";
+import Logo from "../logo.jpg";
 
 const Navb = () => {
   return (
-    <Navbar bg="light" expand="lg" sticky="top">
+    <Navbar bg="white" expand="lg" sticky="top">
       <Container>
-        <Navbar.Brand href="#home">GG Clean</Navbar.Brand>
+        <Navbar.Brand href="/">
+          <img
+            src={Logo}
+            width="210"
+            height="105"
+            className="justify-content-left"
+            alt="GG CLEAN logo"
+          />
+        </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav"></Navbar.Collapse>
         <Nav>
           <Nav.Link href="/">Home</Nav.Link>
           <Nav.Link href="services">Services</Nav.Link>
-          <Nav.Link href="bookus">Book Us</Nav.Link>
-          <Navbar.Collapse>
-            <Navbar.Text>About Us</Navbar.Text>
-          </Navbar.Collapse>
+          <Nav.Link href="booking">Book Now</Nav.Link>
+          <Nav.Link href="aboutus">About Us</Nav.Link>
         </Nav>
       </Container>
     </Navbar>

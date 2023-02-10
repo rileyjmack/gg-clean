@@ -1,6 +1,7 @@
 import React, { Component, Fragment } from "react";
 import Background from "../Background.jpg";
 import Fade from "react-reveal/Fade";
+import Logo from "../logo.jpg";
 
 class Home extends Component {
   render() {
@@ -12,7 +13,18 @@ class Home extends Component {
           </Fade>
           <div style={styles.block}>
             <Fragment>
-              <div className="text-primary">
+              <img src={Logo} height="200" className="p-5" />
+              <div className="p-5">
+                {" "}
+                It is our privilege to present The Luxury Clean (TLC), a
+                cleaning and home service company dedicated to creating and
+                maintaining a safe and hygienic environment for our clients. In
+                addition to raising the standard of white glove cleaning, our
+                mission is to improve our community by offering a professional,
+                trustworthy, and tailored cleaning experience while creating
+                meaningful relationships along the way.
+              </div>
+              {/* <div className="text-primary">
                 <h1 className="display-1">HOME AND OFFICE CLEANING SERVICES</h1>
                 <h2>LEAVE YOUR HOME CLEANING TO US AND WIN TIME</h2>
                 <ul className="text-secondary">
@@ -31,7 +43,7 @@ class Home extends Component {
                 <h2>
                   KEY FEATURES OF OUR HOME CLEANING SERVICES FOR THE DMV REGION
                 </h2>
-              </div>
+              </div> */}
             </Fragment>
           </div>
         </Fragment>

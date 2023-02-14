@@ -83,10 +83,10 @@ export default function App() {
               </p>
               <p>
                 <MDBIcon icon="envelope" className="me-3" />
-                normalstreet@gmail.com
+                bookggclean@gmail.com
               </p>
               <p>
-                <MDBIcon icon="phone" className="me-3" />1 (347) - 228 - 7642
+                <MDBIcon icon="phone" className="me-3" />1 (347) - 481 - 9759
               </p>
             </MDBCol>
           </MDBRow>

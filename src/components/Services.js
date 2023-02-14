@@ -1,34 +1,43 @@
 import React, { Component, Fragment } from "react";
 import Fade from "react-reveal/Fade";
 import Background from "../WoodBackground.jpg";
+import Cleaning from "../cleaning.jpg";
+import "../Services.css";
 
 export default class Services extends Component {
   render() {
     return (
       <div
+        className="everything"
         style={{
           backgroundImage: `url(${Background})`,
         }}
       >
         {" "}
         <Fragment>
-          <div style={styles.block}>
+          <div>
             <Fragment>
               <div>
-                <p style={styles.title}>
-                  We Don't Take You Where You Need To Go
+                <img src={Cleaning} width="50%" height="100%" className="p-5" />
+                <p className="Title">
+                  Because cleanliness and safety matter more than ever before.
                 </p>
-                <p style={styles.title}>...</p>
-                <h1 style={styles.title}>We Take You Where You Want To Go</h1>
-                <p style={styles.title2} className="Paragraph">
+                <p className="Paragraph">
                   {" "}
-                  Welcome to Open Road. We Created This Website With One Mission
-                  In Mind: To Help Motorcyclists Find The Safest And Most Scenic
-                  Routes Available. Using MapBox GL Technologies, Any One Can
-                  Plan Their Next Road Trip While Not Having To Worry About
-                  Avoiding Highways And Unsafe Riding Conditions. Additional
-                  Features Include Saving Your Favorite Trips and Exploring Our
-                  Most Popular Trips and News Aggregate Below.
+                  Our standard Residential service includes all bedrooms,
+                  bathrooms, kitchen area (inside appliances are extra), family
+                  rooms, and other shared spaces in your home. In addition, we
+                  offer Post-construction deep-clean service to clients after
+                  all construction has been finished on new renovation projects.
+                  Please note, we do not clean hazardous materials, please speak
+                  with your contractor about removal before our arrival. For our
+                  Commercial clients we offer a range of services for a fixed
+                  bi-weekly or monthly rate. Please schedule a walk through of
+                  your business for a personal quote. Lastly our Move in / Move
+                  out service includes all bedrooms, bathrooms, kitchen area,
+                  family room, and other shared spaces of a vacant home. Add-ons
+                  are available for all of our services, please see our complete
+                  list below.
                 </p>
               </div>
             </Fragment>
@@ -47,28 +56,3 @@ export default class Services extends Component {
 //     );
 //   }
 // }
-
-const styles = {
-  block: {
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    width: "100%",
-    height: "100%",
-    borderBottom: "1px solid rgba(255,255,255,.2)",
-  },
-  title: {
-    textAlign: "center",
-    fontSize: 40,
-    color: "#000",
-    fontFamily: "Lato, sans-serif",
-    fontWeight: "bold",
-  },
-  title2: {
-    textAlign: "center",
-    fontSize: 25,
-    color: "#000",
-    fontFamily: "Lato, sans-serif",
-    fontWeight: 100,
-  },
-};

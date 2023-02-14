@@ -9,7 +9,7 @@ class Home extends Component {
       <div>
         <Fragment>
           <Fade top>
-            <img src={Background} width="100%" height="100%" />
+            <img src={Background} width="100%" height="100%" className="p-5" />
           </Fade>
           <div style={styles.block}>
             <Fragment>

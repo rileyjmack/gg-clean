@@ -1,0 +1,14 @@
+.body {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  align-content: center;
+  padding: 10px;
+}
+
+.everything {
+  align-content: flex-start;
+}
+
+.Title {
+  font-size: 30px;
+}

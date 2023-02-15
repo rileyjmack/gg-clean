@@ -21,7 +21,7 @@ export default class Services extends Component {
                 <img src={Cleaning} width="50%" height="50%" className="p-5" />
                 <div>
                   <p className="Title">
-                    Because cleanliness and safety matter more than ever before.
+                    Because cleanliness and safety matter more than ever before
                   </p>
                   <p className="Paragraph">
                     {" "}

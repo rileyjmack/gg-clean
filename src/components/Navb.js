@@ -22,7 +22,12 @@ const Navb = () => {
         <Nav>
           <Nav.Link href="/">Home</Nav.Link>
           <Nav.Link href="services">Services</Nav.Link>
-          <Nav.Link href="booking">Book Now</Nav.Link>
+          <Nav.Link
+            href="booking"
+            className="btn btn-outline-success my-2 my-sm-0"
+          >
+            Get Free Quote
+          </Nav.Link>
           <Nav.Link href="aboutus">About Us</Nav.Link>
         </Nav>
       </Container>

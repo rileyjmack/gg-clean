@@ -1,113 +1,106 @@
 import React, { Component, Fragment } from "react";
 import Fade from "react-reveal/Fade";
-import Background from "../WoodBackground.jpg";
+import Maid from "../Maid.jpg";
 
 export default class Booking extends Component {
   render() {
     return (
-      <div
-        style={{
-          backgroundImage: `url(${Background})`,
-        }}
-      >
-        {" "}
-        <Fragment>
-          <div style={styles.block} className="d-flex flex-row">
-            <Fragment>
-              <div>
-                <div className="form-group">
-                  <form>
-                    <label>
-                      <input
-                        type="text"
-                        className="form-control"
-                        name="firstName"
-                        placeholder="First Name"
-                      />
-                    </label>
-                  </form>
-                  <form>
-                    <label>
-                      <input
-                        className="form-control"
-                        type="text"
-                        name="lastName"
-                        placeholder="Last Name"
-                      />
-                    </label>
-                  </form>
-                  <form>
-                    <label>
-                      <input
-                        className="form-control"
-                        type="text"
-                        name="address"
-                        placeholder="Address"
-                      />
-                    </label>
-                  </form>
-                  <form>
-                    <label>
-                      <input
-                        className="form-control"
-                        type="text"
-                        name="bathrooms"
-                        placeholder="Number of Bathrooms"
-                      />
-                    </label>
-                  </form>
-                  <form>
-                    <label>
-                      <input
-                        className="form-control"
-                        type="text"
-                        name="bedrooms"
-                        placeholder="Number of Bedrooms"
-                      />
-                    </label>
-                  </form>
-                  <form>
-                    <label>
-                      <input
-                        className="form-control"
-                        type="text"
-                        name="livingRooms"
-                        placeholder="Number of Living Rooms"
-                      />
-                    </label>
-                  </form>
-                  <form>
-                    <label>
-                      <select className="form-control">
-                        <option placeholder="what service?">
-                          What Service Are You Interested In?
-                        </option>
-                        <option placeholder="office clean">
-                          Office Cleaning
-                        </option>
-                        <option placeholder="house clean">
-                          House Cleaning
-                        </option>
-                        <option placeholder="power cleaning">
-                          Power Cleaning
-                        </option>
-                        <option placeholder="post-construction cleaning">
-                          Post-Construction Cleaning
-                        </option>
-                      </select>
-                    </label>
-                  </form>
-                  <input
-                    className="btn btn-secondary"
-                    type="submit"
-                    value="Submit"
-                  />
-                </div>
+      <Fragment>
+        <div style={styles.block} className="d-flex flex-row">
+          <Fragment>
+            <img src={Maid} height="500" className="p-5" />
+            <div>
+              <div className="form-group">
+                Book With Us:
+                <form>
+                  <label>
+                    <input
+                      type="text"
+                      className="form-control"
+                      name="firstName"
+                      placeholder="First Name"
+                    />
+                  </label>
+                </form>
+                <form>
+                  <label>
+                    <input
+                      className="form-control"
+                      type="text"
+                      name="lastName"
+                      placeholder="Last Name"
+                    />
+                  </label>
+                </form>
+                <form>
+                  <label>
+                    <input
+                      className="form-control"
+                      type="text"
+                      name="address"
+                      placeholder="Address"
+                    />
+                  </label>
+                </form>
+                <form>
+                  <label>
+                    <input
+                      className="form-control"
+                      type="text"
+                      name="bathrooms"
+                      placeholder="Number of Bathrooms"
+                    />
+                  </label>
+                </form>
+                <form>
+                  <label>
+                    <input
+                      className="form-control"
+                      type="text"
+                      name="bedrooms"
+                      placeholder="Number of Bedrooms"
+                    />
+                  </label>
+                </form>
+                <form>
+                  <label>
+                    <input
+                      className="form-control"
+                      type="text"
+                      name="livingRooms"
+                      placeholder="Number of Living Rooms"
+                    />
+                  </label>
+                </form>
+                <form>
+                  <label>
+                    <select className="form-control">
+                      <option placeholder="what service?">
+                        What Service Are You Interested In?
+                      </option>
+                      <option placeholder="office clean">
+                        Office Cleaning
+                      </option>
+                      <option placeholder="house clean">House Cleaning</option>
+                      <option placeholder="power cleaning">
+                        Power Cleaning
+                      </option>
+                      <option placeholder="post-construction cleaning">
+                        Post-Construction Cleaning
+                      </option>
+                    </select>
+                  </label>
+                </form>
+                <input
+                  className="btn btn-secondary"
+                  type="submit"
+                  value="Submit"
+                />
               </div>
-            </Fragment>
-          </div>
-        </Fragment>
-      </div>
+            </div>
+          </Fragment>
+        </div>
+      </Fragment>
     );
   }
 }

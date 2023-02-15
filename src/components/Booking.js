@@ -12,127 +12,97 @@ export default class Booking extends Component {
       >
         {" "}
         <Fragment>
-          <div style={styles.block}>
+          <div style={styles.block} className="d-flex flex-row">
             <Fragment>
               <div>
-                Residential Cleaning:
-                <form>
-                  <label>
-                    <input type="text" name="firstName" value="First Name" />
-                  </label>
-                </form>
-                <form>
-                  <label>
-                    <input type="text" name="lastName" value="Last Name" />
-                  </label>
-                </form>
-                <form>
-                  <label>
-                    <input type="text" name="address" value="Address" />
-                  </label>
-                </form>
-                <form>
-                  <label>
-                    <input
-                      type="text"
-                      name="bathrooms"
-                      value="Number of Bathrooms"
-                    />
-                  </label>
-                </form>
-                <form>
-                  <label>
-                    <input
-                      type="text"
-                      name="bedrooms"
-                      value="Number of Bedrooms"
-                    />
-                  </label>
-                </form>
-                <form>
-                  <label>
-                    <input
-                      type="text"
-                      name="livingRooms"
-                      value="Number of Living Rooms"
-                    />
-                  </label>
-                </form>
-                <form>
-                  <label>
-                    <select>
-                      <option value="what service?">
-                        What Service Are You Interested In?
-                      </option>
-                      <option value="office clean">Office Cleaning</option>
-                      <option value="house clean">House Cleaning</option>
-                      <option value="power cleaning">Power Cleaning</option>
-                      <option value="post-construction cleaning">
-                        Post-Construction Cleaning
-                      </option>
-                    </select>
-                  </label>
-                </form>
-                <input type="submit" value="Submit" />
-                Residential Cleaning:
-                <form>
-                  <label>
-                    <input type="text" name="firstName" value="First Name" />
-                  </label>
-                </form>
-                <form>
-                  <label>
-                    <input type="text" name="lastName" value="Last Name" />
-                  </label>
-                </form>
-                <form>
-                  <label>
-                    <input type="text" name="address" value="Address" />
-                  </label>
-                </form>
-                <form>
-                  <label>
-                    <input
-                      type="text"
-                      name="bathrooms"
-                      value="Number of Bathrooms"
-                    />
-                  </label>
-                </form>
-                <form>
-                  <label>
-                    <input
-                      type="text"
-                      name="bedrooms"
-                      value="Number of Bedrooms"
-                    />
-                  </label>
-                </form>
-                <form>
-                  <label>
-                    <input
-                      type="text"
-                      name="livingRooms"
-                      value="Number of Living Rooms"
-                    />
-                  </label>
-                </form>
-                <form>
-                  <label>
-                    <select>
-                      <option value="what service?">
-                        What Service Are You Interested In?
-                      </option>
-                      <option value="office clean">Office Cleaning</option>
-                      <option value="house clean">House Cleaning</option>
-                      <option value="power cleaning">Power Cleaning</option>
-                      <option value="post-construction cleaning">
-                        Post-Construction Cleaning
-                      </option>
-                    </select>
-                  </label>
-                </form>
-                <input type="submit" value="Submit" />
+                <div className="form-group">
+                  <form>
+                    <label>
+                      <input
+                        type="text"
+                        className="form-control"
+                        name="firstName"
+                        placeholder="First Name"
+                      />
+                    </label>
+                  </form>
+                  <form>
+                    <label>
+                      <input
+                        className="form-control"
+                        type="text"
+                        name="lastName"
+                        placeholder="Last Name"
+                      />
+                    </label>
+                  </form>
+                  <form>
+                    <label>
+                      <input
+                        className="form-control"
+                        type="text"
+                        name="address"
+                        placeholder="Address"
+                      />
+                    </label>
+                  </form>
+                  <form>
+                    <label>
+                      <input
+                        className="form-control"
+                        type="text"
+                        name="bathrooms"
+                        placeholder="Number of Bathrooms"
+                      />
+                    </label>
+                  </form>
+                  <form>
+                    <label>
+                      <input
+                        className="form-control"
+                        type="text"
+                        name="bedrooms"
+                        placeholder="Number of Bedrooms"
+                      />
+                    </label>
+                  </form>
+                  <form>
+                    <label>
+                      <input
+                        className="form-control"
+                        type="text"
+                        name="livingRooms"
+                        placeholder="Number of Living Rooms"
+                      />
+                    </label>
+                  </form>
+                  <form>
+                    <label>
+                      <select className="form-control">
+                        <option placeholder="what service?">
+                          What Service Are You Interested In?
+                        </option>
+                        <option placeholder="office clean">
+                          Office Cleaning
+                        </option>
+                        <option placeholder="house clean">
+                          House Cleaning
+                        </option>
+                        <option placeholder="power cleaning">
+                          Power Cleaning
+                        </option>
+                        <option placeholder="post-construction cleaning">
+                          Post-Construction Cleaning
+                        </option>
+                      </select>
+                    </label>
+                  </form>
+                  <input
+                    className="btn btn-secondary"
+                    type="submit"
+                    value="Submit"
+                  />
+                </div>
               </div>
             </Fragment>
           </div>

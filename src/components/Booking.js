@@ -15,20 +15,10 @@ export default class Booking extends Component {
                 <form>
                   <label>
                     <input
-                      type="text"
-                      className="form-control"
-                      name="firstName"
-                      placeholder="First Name"
-                    />
-                  </label>
-                </form>
-                <form>
-                  <label>
-                    <input
                       className="form-control"
                       type="text"
-                      name="lastName"
-                      placeholder="Last Name"
+                      name="name"
+                      placeholder="Full Name"
                     />
                   </label>
                 </form>

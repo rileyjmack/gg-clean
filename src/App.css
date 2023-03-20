@@ -36,3 +36,11 @@
     transform: rotate(360deg);
   }
 }
+
+.top-buffer {
+  margin-top: 3000px;
+}
+
+.bg-wood {
+  background-color: black;
+}

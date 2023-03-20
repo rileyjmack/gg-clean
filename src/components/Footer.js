@@ -11,7 +11,7 @@ export default function App() {
   return (
     <MDBFooter bgColor="light" className="text-center text-lg-start text-muted">
       <section className="d-flex justify-content-center justify-content-lg-between p-4 border-bottom"></section>
-
+      <section className="d-flex justify-content-center justify-content-lg-between p-4 border-bottom"></section>
       <section className="">
         <MDBContainer className="text-center text-md-start mt-5">
           <MDBRow className="mt-3">
@@ -28,25 +28,28 @@ export default function App() {
             </MDBCol>
 
             <MDBCol md="2" lg="2" xl="2" className="mx-auto mb-4">
-              <h6 className="text-uppercase fw-bold mb-4">Products</h6>
+              <h6 className="text-uppercase fw-bold mb-4">Social Media</h6>
               <p>
-                <a href="#!" className="text-reset">
-                  Office Cleaning
+                <a
+                  href="https://www.bark.com/en/us/company/get-good-cleaning/28BzY/"
+                  className="text-reset"
+                >
+                  Leave a Review
                 </a>
               </p>
               <p>
                 <a href="#!" className="text-reset">
-                  Home Cleaning
+                  Instagram
                 </a>
               </p>
               <p>
                 <a href="#!" className="text-reset">
-                  Power Cleaning
+                  LinkedIn
                 </a>
               </p>
               <p>
                 <a href="#!" className="text-reset">
-                  Post-Construction Cleaning
+                  Facebook
                 </a>
               </p>
             </MDBCol>
@@ -99,7 +102,7 @@ export default function App() {
       >
         © 2021 Copyright:
         <a className="text-reset fw-bold" href="https://GGclean.com/">
-          GGclean.com
+          GGclean.nyc
         </a>
       </div>
     </MDBFooter>

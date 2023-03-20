@@ -1,80 +1,122 @@
 import React, { Component, Fragment } from "react";
 import Background from "../Background.jpg";
-import Fade from "react-reveal/Fade";
 import Logo from "../logo.jpg";
+import Navb from "../components/Navb";
+import livingRoom from "../livingRoom.jpg";
+import livingRoom2 from "../livingRoom2.jpg";
+import InputGroup from "react-bootstrap/InputGroup";
+import Form from "react-bootstrap/Form";
+import {
+  MDBRow,
+  MDBCol,
+  MDBInput,
+  MDBCheckbox,
+  MDBBtn,
+} from "mdb-react-ui-kit";
 
 class Home extends Component {
   render() {
     return (
       <div>
-        <Fragment>
-          <Fade top>
-            <img src={Background} width="100%" height="100%" className="p-5" />
-          </Fade>
-          <div style={styles.block}>
-            <Fragment>
-              <img src={Logo} height="200" className="p-5" />
-              <div className="p-5">
-                {" "}
-                It is our privilege to present The Luxury Clean (TLC), a
-                cleaning and home service company dedicated to creating and
-                maintaining a safe and hygienic environment for our clients. In
-                addition to raising the standard of white glove cleaning, our
-                mission is to improve our community by offering a professional,
-                trustworthy, and tailored cleaning experience while creating
-                meaningful relationships along the way.
-              </div>
-              {/* <div className="text-primary">
-                <h1 className="display-1">HOME AND OFFICE CLEANING SERVICES</h1>
-                <h2>LEAVE YOUR HOME CLEANING TO US AND WIN TIME</h2>
-                <ul className="text-secondary">
-                  <li>
-                    BOOK ONLINE Select the date and time you’d like your
-                    cleaning professional to show up.
-                  </li>
-                  <li>
-                    WE CLEAN A certified cleaner comes over and cleans your
-                    place.
-                  </li>
-                  <li>
-                    YOU RELAX Sit back and relax. Enjoy your sparkling home!
-                  </li>
-                </ul>
-                <h2>
-                  KEY FEATURES OF OUR HOME CLEANING SERVICES FOR THE DMV REGION
-                </h2>
-              </div> */}
-            </Fragment>
+        <Navb />
+        <div>
+          <img src={Background} alt="background" width="100%" />
+          <div className="row m-auto">
+            <div className="col">
+              <img
+                src={livingRoom}
+                alt="livingroom"
+                width="100%"
+                padding="50"
+              />
+              <figcaption class="figure-caption">
+                Get Good Cleaning services works to give you a spotless home.
+                Whether you need standard, deep cleaning, post-construction or
+                moving in/out cleaning, we will creating a plan tha fits your
+                schedule and budget. We value our clients and aim to build
+                long-lasting relationships based on trust, integrity and
+                exceptional service.
+              </figcaption>
+            </div>
+            <div className="col">
+              <img
+                src={livingRoom2}
+                alt="livingroom2"
+                width="100%"
+                padding="50"
+              />
+              <figcaption class="figure-caption">
+                Get Good Cleaning is dedicated to a clean and healthy work
+                environment for your employees, customers, and visitors. We
+                provide a premium cleaning service to business of all sizes. We
+                are fully bonded, licensed and insured. Get Good Cleaning
+                guarantees that your premises are in reliable and safe hands. We
+                strive to exceed your expectations with every job we do.
+              </figcaption>
+            </div>
           </div>
-        </Fragment>
+        </div>
+        <div>
+          <Fragment>
+            <div className="d-flex flex-row bg-warning">
+              <Fragment>
+                <div>
+                  <div className="form-group bg-img ">
+                    Request a Quote:
+                    <form>
+                      <MDBRow className="mb-4">
+                        <MDBCol>
+                          <MDBInput id="form6Example1" label="First name" />
+                        </MDBCol>
+                        <MDBCol>
+                          <MDBInput id="form6Example2" label="Last name" />
+                        </MDBCol>
+                      </MDBRow>
+
+                      <MDBInput
+                        wrapperClass="mb-4"
+                        id="form6Example3"
+                        label="Company name"
+                      />
+                      <MDBInput
+                        wrapperClass="mb-4"
+                        id="form6Example4"
+                        label="Address"
+                      />
+                      <MDBInput
+                        wrapperClass="mb-4"
+                        type="email"
+                        id="form6Example5"
+                        label="Email"
+                      />
+                      <MDBInput
+                        wrapperClass="mb-4"
+                        type="tel"
+                        id="form6Example6"
+                        label="Phone"
+                      />
+
+                      <MDBInput
+                        wrapperClass="mb-4"
+                        textarea
+                        id="form6Example7"
+                        rows={4}
+                        label="Additional information About Your Needs"
+                      />
+
+                      <MDBBtn className="mb-4" type="submit" block>
+                        Get a Quote!
+                      </MDBBtn>
+                    </form>
+                  </div>
+                </div>
+              </Fragment>
+            </div>
+          </Fragment>
+        </div>
       </div>
     );
   }
 }
 
 export default Home;
-const styles = {
-  block: {
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    width: "100%",
-    height: "100%",
-    background: "#FFFFFF",
-    borderBottom: "1px solid rgba(255,255,255,.2)",
-  },
-  title: {
-    textAlign: "center",
-    fontSize: 40,
-    color: "#FFFFFF",
-    fontFamily: "Lato, sans-serif",
-    fontWeight: "bold",
-  },
-  title2: {
-    textAlign: "center",
-    fontSize: 25,
-    color: "#FFFFFF",
-    fontFamily: "Lato, sans-serif",
-    fontWeight: 100,
-  },
-};

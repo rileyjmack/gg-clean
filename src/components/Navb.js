@@ -1,37 +1,75 @@
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
+import Dropdown from "react-bootstrap/Dropdown";
+import DropdownButton from "react-bootstrap/DropdownButton";
 import NavDropdown from "react-bootstrap/NavDropdown";
+
 import Logo from "../logo.jpg";
 
 const Navb = () => {
   return (
-    <Navbar bg="white" expand="lg" sticky="top">
-      <Container>
-        <Navbar.Brand href="/">
-          <img
-            src={Logo}
-            width="210"
-            height="105"
-            className="justify-content-left"
-            alt="GG CLEAN logo"
-          />
-        </Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav"></Navbar.Collapse>
-        <Nav>
-          <Nav.Link href="/">Home</Nav.Link>
-          <Nav.Link href="services">Services</Nav.Link>
-          <Nav.Link
-            href="booking"
-            className="btn btn-outline-success my-2 my-sm-0"
-          >
-            Get Free Quote
-          </Nav.Link>
-          <Nav.Link href="aboutus">About Us</Nav.Link>
-        </Nav>
-      </Container>
-    </Navbar>
+    <div className="navbar-static-top">
+      <Navbar expand="lg" sticky="top">
+        <Container>
+          <Navbar.Brand href="/">
+            <img
+              src={Logo}
+              width="266"
+              height="100"
+              className="justify-content-left"
+              alt="GG CLEAN logo"
+            />
+          </Navbar.Brand>
+          <Navbar.Toggle aria-controls="basic-navbar-nav" />
+          <Navbar.Collapse id="basic-navbar-nav"></Navbar.Collapse>
+          <Nav>
+            <Nav.Link href="services">About Us</Nav.Link>
+            <NavDropdown
+              id="nav-dropdown-dark-example"
+              title="Our Services"
+              menuVariant="light"
+            >
+              <NavDropdown.Item href="#action/3.1">
+                Standard Cleaning
+              </NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.2">
+                Deep Cleaning
+              </NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.3">
+                Disinfectant Services
+              </NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.4">
+                Office Cleaning
+              </NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.4">
+                Commercial Cleaning
+              </NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.4">
+                Post Construction Cleaning
+              </NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.4">
+                Airbnb Cleaning
+              </NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.4">
+                Move In/Out Cleaning
+              </NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.4">
+                Garbage Removal
+              </NavDropdown.Item>
+            </NavDropdown>
+            <Nav.Link href="aboutus">Connect</Nav.Link>
+            <Nav.Link href="aboutus">Ask for a Quote</Nav.Link>
+            <Nav.Link
+              href="booking"
+              className="btn btn-outline-primary my-2 my-sm-0"
+            >
+              Call Now
+            </Nav.Link>
+          </Nav>
+        </Container>
+      </Navbar>
+    </div>
   );
 };
 

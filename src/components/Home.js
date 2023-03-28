@@ -16,19 +16,23 @@ import {
 } from "mdb-react-ui-kit";
 import { Parallax, Background } from "react-parallax";
 
-class Home extends Component {
-  render() {
-    return (
+const Home = () => {
+  return (
+    <div>
+      <Navb />
       <div>
-        <Navb />
-        <div>
-          <Parallax bgImage={BackgroundPic} strength={500}>
-            {" "}
-            <div style={{ height: 1500 }}>
-              <div></div>
-            </div>
-          </Parallax>
-          <Parallax>
+        <Parallax
+          bgImage={BackgroundPic}
+          strength={500}
+          blur={{ min: -1, max: 1 }}
+        >
+          {" "}
+          <div style={{ height: 1500 }}>
+            <div></div>
+          </div>
+        </Parallax>
+        <Parallax bgImage={WoodBackground} strength={500}>
+          <div>
             <div className="row m-auto">
               <div className="col">
                 <img
@@ -63,10 +67,8 @@ class Home extends Component {
                 </figcaption>
               </div>
             </div>
-          </Parallax>
-        </div>
-        <div>
-          <Parallax bgImage={WoodBackground} strength={500}>
+          </div>
+          <div>
             <div className="d-flex flex-row ">
               <div>
                 <div className="form-group bg-img ">
@@ -119,11 +121,11 @@ class Home extends Component {
                 </div>
               </div>
             </div>
-          </Parallax>
-        </div>
+          </div>
+        </Parallax>
       </div>
-    );
-  }
-}
+    </div>
+  );
+};
 
 export default Home;

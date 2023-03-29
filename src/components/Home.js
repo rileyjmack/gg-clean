@@ -6,14 +6,8 @@ import Navb from "../components/Navb";
 import livingRoom from "../livingRoom.jpg";
 import livingRoom2 from "../livingRoom2.jpg";
 import InputGroup from "react-bootstrap/InputGroup";
-import Form from "react-bootstrap/Form";
-import {
-  MDBRow,
-  MDBCol,
-  MDBInput,
-  MDBCheckbox,
-  MDBBtn,
-} from "mdb-react-ui-kit";
+import Formy from "./Formy";
+
 import { Parallax, Background } from "react-parallax";
 
 const Home = () => {
@@ -41,7 +35,7 @@ const Home = () => {
                   width="100%"
                   padding="50"
                 />
-                <figcaption class="figure-caption">
+                <figcaption className="figure-caption">
                   Get Good Cleaning services works to give you a spotless home.
                   Whether you need standard, deep cleaning, post-construction or
                   moving in/out cleaning, we will creating a plan tha fits your
@@ -57,7 +51,7 @@ const Home = () => {
                   width="100%"
                   padding="50"
                 />
-                <figcaption class="figure-caption">
+                <figcaption className="figure-caption">
                   Get Good Cleaning is dedicated to a clean and healthy work
                   environment for your employees, customers, and visitors. We
                   provide a premium cleaning service to business of all sizes.
@@ -69,58 +63,7 @@ const Home = () => {
             </div>
           </div>
           <div>
-            <div className="d-flex flex-row ">
-              <div>
-                <div className="form-group bg-img ">
-                  Request a Quote:
-                  <form>
-                    <MDBRow className="mb-4">
-                      <MDBCol>
-                        <MDBInput id="form6Example1" label="First name" />
-                      </MDBCol>
-                      <MDBCol>
-                        <MDBInput id="form6Example2" label="Last name" />
-                      </MDBCol>
-                    </MDBRow>
-
-                    <MDBInput
-                      wrapperClass="mb-4"
-                      id="form6Example3"
-                      label="Company name"
-                    />
-                    <MDBInput
-                      wrapperClass="mb-4"
-                      id="form6Example4"
-                      label="Address"
-                    />
-                    <MDBInput
-                      wrapperClass="mb-4"
-                      type="email"
-                      id="form6Example5"
-                      label="Email"
-                    />
-                    <MDBInput
-                      wrapperClass="mb-4"
-                      type="tel"
-                      id="form6Example6"
-                      label="Phone"
-                    />
-
-                    <MDBInput
-                      wrapperClass="mb-4"
-                      textarea
-                      id="form6Example7"
-                      rows={4}
-                      label="Additional information About Your Needs"
-                    />
-
-                    <MDBBtn className="mb-4" type="submit" block>
-                      Get a Quote!
-                    </MDBBtn>
-                  </form>
-                </div>
-              </div>
-            </div>
+            <Formy />
           </div>
         </Parallax>
       </div>

@@ -41,6 +41,13 @@
   margin-top: 3000px;
 }
 
-.bg-wood {
-  background-color: black;
+#form {
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+}
+
+.body {
+  display: inline-block;
 }

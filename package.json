@@ -13,6 +13,7 @@
     "form-data": "^4.0.0",
     "mdb-react-ui-kit": "^5.1.0",
     "morgan": "^1.10.0",
+    "pg": "^8.10.0",
     "react": "^18.2.0",
     "react-bootstrap": "^2.7.0",
     "react-dom": "^18.2.0",
@@ -29,7 +30,7 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "seed": "node script/seed.js",
+    "seed": "node src/script/seed.js",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",

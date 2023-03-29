@@ -1,20 +1,13 @@
-const { db } = require("./db");
-const PORT = process.env.PORT || 8080;
-const app = require("./app");
-const seed = require("../script/seed");
+//this is the access point for all things database related!
 
-const init = async () => {
-  try {
-    if (process.env.SEED === "true") {
-      await seed();
-    } else {
-      await db.sync();
-    }
-    // start listening (and create a 'server' object representing our server)
-    app.listen(PORT, () => console.log(`Mixing it up on port ${PORT}`));
-  } catch (ex) {
-    console.log(ex);
-  }
+const db = require("./db");
+const Client = require("./models/Client");
+
+//associations could go here!
+
+module.exports = {
+  db,
+  models: {
+    Client,
+  },
 };
-
-init();

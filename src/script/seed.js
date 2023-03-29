@@ -3,7 +3,7 @@
 const {
   db,
   models: { Client },
-} = require("/server/db");
+} = require("../server/db");
 
 /**
  * seed - this function clears the database, updates tables to

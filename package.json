@@ -30,7 +30,7 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "seed": "node src/script/seed.js",
+    "seed": "node script/seed.js",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",

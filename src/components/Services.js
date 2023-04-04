@@ -5,9 +5,21 @@ import { fetchClients } from "../store/clientsReducer";
 import "../Services.css";
 
 const Services = (props) => {
-  useEffect(() => props.getClients);
-  console.log(props);
-  return <div>{props.clients}</div>;
+  useEffect(() => props.getClients, []);
+  return (
+    <div>
+      {props.clients.map((client) => (
+        <ul>
+          <li>{client.firstName}</li>
+          <li>{client.lastName}</li>
+          <li>{client.companyName}</li>
+          <li>{client.comments}</li>
+          <li>{client.phoneNumber}</li>
+          <li>{client.email}</li>
+        </ul>
+      ))}
+    </div>
+  );
 };
 
 const mapState = (state) => {

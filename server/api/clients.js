@@ -18,7 +18,9 @@ router.get("/", async (req, res, next) => {
 router.post("/", async (req, res, next) => {
   try {
     const client = req.body;
-    const newClient = await Client.create(client);
+    const newClient = await Client.create(client.formData);
+    console.log("client", client);
+    console.log("newclient", newClient);
     res.json(newClient);
   } catch (err) {
     next(err);

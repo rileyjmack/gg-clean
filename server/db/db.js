@@ -21,5 +21,4 @@ if (process.env.DATABASE_URL) {
 
 const db = new Sequelize(`postgres://localhost:5432/${databaseName}`, config);
 
-console.log(db);
 module.exports = db;

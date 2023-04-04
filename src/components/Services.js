@@ -10,12 +10,12 @@ const Services = (props) => {
     <div>
       {props.clients.map((client) => (
         <ul>
-          <li>{client.firstName}</li>
-          <li>{client.lastName}</li>
-          <li>{client.companyName}</li>
-          <li>{client.comments}</li>
-          <li>{client.phoneNumber}</li>
-          <li>{client.email}</li>
+          <li key={client.id}>{client.firstName}</li>
+          <li key={client.id}>{client.lastName}</li>
+          <li key={client.id}>{client.companyName}</li>
+          <li key={client.id}>{client.comments}</li>
+          <li key={client.id}>{client.phoneNumber}</li>
+          <li key={client.id}>{client.email}</li>
         </ul>
       ))}
     </div>

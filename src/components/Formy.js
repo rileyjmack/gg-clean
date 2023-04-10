@@ -30,7 +30,7 @@ const Formy = (props) => {
   };
 
   return (
-    <div className="d-flex flex-row ">
+    <div className="formSubmission d-flex flex-row ">
       <div>
         <div className="form-group bg-img " id="form">
           Request a Quote:

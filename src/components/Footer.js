@@ -6,6 +6,8 @@ import {
   MDBCol,
   MDBIcon,
 } from "mdb-react-ui-kit";
+import { Link } from "react-router-dom";
+import Services from "./Services";
 
 export default function App() {
   return (
@@ -20,11 +22,9 @@ export default function App() {
                 <MDBIcon icon="gem" className="me-3" />
                 GG Clean
               </h6>
-              <p>
-                Here you can use rows and columns to organize your footer
-                content. Lorem ipsum dolor sit amet, consectetur adipisicing
-                elit.
-              </p>
+              <Link to={"/services"}>
+                <div>Admin LogIn</div>
+              </Link>
             </MDBCol>
 
             <MDBCol md="2" lg="2" xl="2" className="mx-auto mb-4">

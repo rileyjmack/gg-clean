@@ -51,3 +51,9 @@
 .body {
   display: inline-block;
 }
+
+.formSubmission {
+  text-align: center;
+  color: black;
+  padding: 100px;
+}

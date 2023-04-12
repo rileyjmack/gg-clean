@@ -5,12 +5,8 @@ import reportWebVitals from "./reportWebVitals";
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import { Provider } from "react-redux";
 import store from "./store";
-import { initThinBackend, ensureIsUser } from "thin-backend";
 
 // This needs to be run before any calls to `query`, `createRecord`, etc.
-initThinBackend({
-  host: "https://https://gg-clean.thinbackend.app",
-});
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(

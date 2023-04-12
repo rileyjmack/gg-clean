@@ -4,6 +4,10 @@ const morgan = require("morgan");
 const app = express();
 module.exports = app;
 
+app.get("/", (req, res) => {
+  res.send("Express on Vercel");
+});
+
 // logging middleware
 app.use(morgan("dev"));
 

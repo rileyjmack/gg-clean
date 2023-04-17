@@ -1,15 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { connect } from "react-redux";
 import { fetchClients } from "../store/clientsReducer";
-import { useQuery } from "ihp-datasync/ihp-datasync-react";
-import { query } from "ihp-datasync/ihp-querybuilder";
 
 import "../Services.css";
 
 const Services = (props) => {
   useEffect(() => props.getClients, []);
-  console.log(useQuery(query("clients").orderBy("createdAt")));
-  const clients = useQuery(query("clients").orderBy("createdAt"));
+  console.log("props", props);
   return (
     <div>
       {props.clients.map((client) => (

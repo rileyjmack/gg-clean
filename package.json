@@ -49,6 +49,7 @@
     "watch": "webpack --watch",
     "serve": "webpack serve"
   },
+  "proxy": "http://localhost:5000",
   "eslintConfig": {
     "extends": [
       "react-app",

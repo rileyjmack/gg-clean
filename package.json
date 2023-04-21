@@ -16,6 +16,7 @@
     "ihp-datasync": "https://gitpkg.now.sh/digitallyinduced/ihp/lib/IHP/DataSync?0babfec7a90675ca37d56c38dac69e784e64fc83",
     "mdb-react-ui-kit": "^5.1.0",
     "morgan": "^1.10.0",
+    "next": "^13.3.0",
     "node-polyfill-webpack-plugin": "^2.0.1",
     "pg": "^8.10.0",
     "react": "^18.2.0",

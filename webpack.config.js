@@ -11,7 +11,8 @@ const config = {
     path: path.resolve(__dirname, "dist"),
   },
   devServer: {
-    allowedHosts: "all",
+    compress: true,
+    public: "https://ggclean4.onrender.com/",
   },
   plugins: [
     new HtmlWebpackPlugin({

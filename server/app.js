@@ -40,6 +40,10 @@ app.use("*", (req, res) => {
   res.sendFile(path.join(__dirname, "..", "public/index.html"));
 });
 
+// app.listen(5000, () => {
+//   console.log("Running on port 5000.");
+// });
+
 // error handling endware
 app.use((err, req, res, next) => {
   console.error(err);

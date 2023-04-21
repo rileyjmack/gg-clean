@@ -6,8 +6,6 @@ import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import { Provider } from "react-redux";
 import store from "./store";
 
-// This needs to be run before any calls to `query`, `createRecord`, etc.
-
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <Provider store={store}>

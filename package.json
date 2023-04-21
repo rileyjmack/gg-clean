@@ -1,6 +1,6 @@
 {
   "name": "lucca2",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
   "dependencies": {
     "@craco/craco": "^7.0.0-alpha.3",
@@ -39,11 +39,15 @@
   "scripts": {
     "seed": "node script/seed.js",
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "webpack --mode=production --node-env=production",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "server": "node-env-run server --exec nodemon | pino-colada",
-    "dev": "run-p start server"
+    "dev": "run-p start server",
+    "build:dev": "webpack --mode=development",
+    "build:prod": "webpack --mode=production --node-env=production",
+    "watch": "webpack --watch",
+    "serve": "webpack serve"
   },
   "proxy": "http://localhost:5000",
   "eslintConfig": {
@@ -66,11 +70,14 @@
   },
   "devDependencies": {
     "@types/thin-backend": "https://thin.dev/types/86cd8ab5-180d-457a-aae4-3a65ab480d03/ywqjGIAnncGQhHOVmiickHDoDkKIBQpU",
+    "@webpack-cli/generators": "^3.0.1",
     "express-pino-logger": "^7.0.0",
     "node-env-run": "^4.0.2",
     "nodemon": "^2.0.22",
     "npm-run-all": "^4.1.5",
     "pino-colada": "^2.2.2",
-    "vercel": "^28.20.0"
-  }
+    "vercel": "^28.20.0",
+    "webpack-cli": "^5.0.1"
+  },
+  "description": "My webpack project"
 }

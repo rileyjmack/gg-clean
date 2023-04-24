@@ -19,8 +19,6 @@ if (process.env.DATABASE_URL) {
   };
 }
 
-const db = new Sequelize(
-  "postgres://lucca2_user:28jyxldSP1BmiZG4g55RqWxkfpAH4KxJ@dpg-ch192j33cv203bo38gig-a/lucca2"
-);
+const db = new Sequelize(`postgres://localhost:5432/${databaseName}`, config);
 
 module.exports = db;

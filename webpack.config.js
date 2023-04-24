@@ -1,49 +1,42 @@
-// Generated using webpack-cli https://github.com/webpack/webpack-cli
-
-const path = require("path");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
-
-const isProduction = process.env.NODE_ENV == "production";
-
-const config = {
-  entry: "./src/index.js",
-  output: {
-    path: path.resolve(__dirname, "dist"),
-  },
+module.exports = {
+  // ...
   devServer: {
-    compress: true,
-    public: "https://ggclean4.onrender.com/",
+    setupMiddlewares: (middlewares, devServer) => {
+      if (!devServer) {
+        throw new Error("webpack-dev-server is not defined");
+      }
+
+      devServer.app.get("/setup-middleware/some/path", (_, response) => {
+        response.send("setup-middlewares option GET");
+      });
+
+      // Use the `unshift` method if you want to run a middleware before all other middlewares
+      // or when you are migrating from the `onBeforeSetupMiddleware` option
+      middlewares.unshift({
+        name: "first-in-array",
+        // `path` is optional
+        path: "/foo/path",
+        middleware: (req, res) => {
+          res.send("Foo!");
+        },
+      });
+
+      // Use the `push` method if you want to run a middleware after all other middlewares
+      // or when you are migrating from the `onAfterSetupMiddleware` option
+      middlewares.push({
+        name: "hello-world-test-one",
+        // `path` is optional
+        path: "/foo/bar",
+        middleware: (req, res) => {
+          res.send("Foo Bar!");
+        },
+      });
+
+      middlewares.push((req, res) => {
+        res.send("Hello World!");
+      });
+
+      return middlewares;
+    },
   },
-  plugins: [
-    new HtmlWebpackPlugin({
-      template: "index.html",
-    }),
-
-    // Add your plugins here
-    // Learn more about plugins from https://webpack.js.org/configuration/plugins/
-  ],
-  module: {
-    rules: [
-      {
-        test: /\.(js|jsx)$/i,
-        loader: "babel-loader",
-      },
-      {
-        test: /\.(eot|svg|ttf|woff|woff2|png|jpg|gif)$/i,
-        type: "asset",
-      },
-
-      // Add your rules for custom modules here
-      // Learn more about loaders from https://webpack.js.org/loaders/
-    ],
-  },
-};
-
-module.exports = () => {
-  if (isProduction) {
-    config.mode = "production";
-  } else {
-    config.mode = "development";
-  }
-  return config;
 };

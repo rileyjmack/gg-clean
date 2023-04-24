@@ -1,42 +1,28 @@
 module.exports = {
-  // ...
+  entry: ["./client/index.js"],
   devServer: {
-    setupMiddlewares: (middlewares, devServer) => {
-      if (!devServer) {
-        throw new Error("webpack-dev-server is not defined");
-      }
-
-      devServer.app.get("/setup-middleware/some/path", (_, response) => {
-        response.send("setup-middlewares option GET");
-      });
-
-      // Use the `unshift` method if you want to run a middleware before all other middlewares
-      // or when you are migrating from the `onBeforeSetupMiddleware` option
-      middlewares.unshift({
-        name: "first-in-array",
-        // `path` is optional
-        path: "/foo/path",
-        middleware: (req, res) => {
-          res.send("Foo!");
+    compress: true,
+    disableHostCheck: true, // That solved it
+  },
+  output: {
+    path: __dirname,
+    filename: "./public/bundle.js",
+  },
+  devtool: "source-map",
+  module: {
+    rules: [
+      {
+        test: /jsx?$/,
+        exclude: /node_modules/,
+        loader: "babel-loader",
+        options: {
+          presets: ["@babel/preset-react"],
         },
-      });
-
-      // Use the `push` method if you want to run a middleware after all other middlewares
-      // or when you are migrating from the `onAfterSetupMiddleware` option
-      middlewares.push({
-        name: "hello-world-test-one",
-        // `path` is optional
-        path: "/foo/bar",
-        middleware: (req, res) => {
-          res.send("Foo Bar!");
-        },
-      });
-
-      middlewares.push((req, res) => {
-        res.send("Hello World!");
-      });
-
-      return middlewares;
-    },
+      },
+      {
+        test: /\.css$/i,
+        use: ["style-loader", "css-loader"],
+      },
+    ],
   },
 };

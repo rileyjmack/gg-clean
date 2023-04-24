@@ -46,6 +46,7 @@
     "dev": "run-p start server"
   },
   "proxy": "http://localhost:5000",
+  "homepage": "https://gg-clean.herokuapp.com/",
   "eslintConfig": {
     "extends": [
       "react-app",

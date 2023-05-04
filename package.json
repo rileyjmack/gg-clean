@@ -64,6 +64,9 @@
       "last 1 safari version"
     ]
   },
+  "engines": {
+    "node": "16.x"
+  },
   "devDependencies": {
     "@types/thin-backend": "https://thin.dev/types/86cd8ab5-180d-457a-aae4-3a65ab480d03/ywqjGIAnncGQhHOVmiickHDoDkKIBQpU",
     "express-pino-logger": "^7.0.0",

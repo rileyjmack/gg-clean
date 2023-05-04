@@ -20,7 +20,8 @@ if (process.env.DATABASE_URL) {
 }
 
 const db = new Sequelize(
-  process.env.POSTGRES_URL || `postgres://localhost:5432/${databaseName}`,
+  process.env.POSTGRES_URL ||
+    `postgres://lucca2_user:28jyxldSP1BmiZG4g55RqWxkfpAH4KxJ@dpg-ch192j33cv203bo38gig-a/lucca2`,
   config
 );
 
